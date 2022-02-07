@@ -10,6 +10,7 @@ namespace BeetrootProject1
             double x = Convert.ToDouble(Console.ReadLine());
             
             int y = 2;
+            // test comment
 
             double resultOne = -6 * Math.Pow(x, 3) + 5 * Math.Pow(x, 2) - 10 * x + 15;
             Console.WriteLine("-6*x^3+5*x^2-10*x+15 = " + resultOne);
