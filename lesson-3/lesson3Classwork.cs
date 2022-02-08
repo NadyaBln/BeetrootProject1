@@ -2,7 +2,7 @@
 
 namespace lesson_3
 {
-    class Program
+    class lesson3Classwork
     {
         static void Main(string[] args)
         {
