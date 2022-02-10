@@ -6,6 +6,7 @@ namespace lesson_4_methods
     {
         static void Main(string[] args)
         {
+            //------------------------------Classwork part-----------------------------------
             int sum = Sum(4, 5);
             //int sum = Sum('4', 5);
             //'4' is os as char is int inside
@@ -32,7 +33,7 @@ namespace lesson_4_methods
 
             if (TryDivideByThree(i, out int result))
             {
-                Console.WriteLine(result);
+                Console.WriteLine("TryDivideByThree "+ result);
             }
 
 
@@ -40,8 +41,45 @@ namespace lesson_4_methods
             Concat("10", "20"); //"10, 20"
             Concat("10", "20", "30"); //"10, 20, 30"
             Concat("10", "20", "30", "40"); //4
-        }
 
+
+
+            //---------------------------Homework part-------------------------------------------------------------
+
+            Console.WriteLine("enter A ");
+            string a = Console.ReadLine();
+
+            Console.WriteLine("enter B ");
+            string b = Console.ReadLine();
+
+            int summa;
+
+            if ((int.TryParse(a, out int Adigit)) && (int.TryParse(b, out int Bdigit)))
+            {
+                Console.WriteLine($"Value {MaxValue(Adigit, Bdigit)} is greater");
+                Console.WriteLine($"Value {MinValue(Adigit, Bdigit)} is less");
+                Console.WriteLine($"Result of method 'TrySumIfOdd' is {TrySumIfOdd(Adigit, Bdigit, out summa)} and Sum is {summa}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid input");
+            }
+
+            //overload
+            Console.WriteLine($"Max Value is {MaxValue(10, 20)}");
+            Console.WriteLine($"Max Value is {MaxValue(101, 20, 5)}");
+            Console.WriteLine($"Max Value is {MaxValue(10, 20, 5, 533)}");
+
+            Console.WriteLine($"Min value is {MinValue(5, 533)}");
+            Console.WriteLine($"Min value is {MinValue(20, 56, 533)}");
+            Console.WriteLine($"Min value is {MinValue(10, 20, 52, 533)}");
+
+
+
+            Repeat("Ga", 5);
+
+        }
+        //-----------------------Classwork-part-------------------------------
         static void Concat (int a, int b)
         {
             Console.WriteLine(a + b);
@@ -121,15 +159,94 @@ namespace lesson_4_methods
             return value * Factorial(value - 1);
 
             //as loop
-                //int a = 0;
-                //for (int i = 0; i < value; i++)
-                //{
-                //    a = i * (i + 1);
+            //int a = 0;
+            //for (int i = 0; i < value; i++)
+            //{
+            //    a = i * (i + 1);
 
-                //}
-                //Console.WriteLine(a);
+            //}
+            //Console.WriteLine(a);
+        }
+
+
+
+
+        //--------------------Homework--------------------------------------------------
+        //10 feb 2022
+
+        //Method that will return max value among all the parameters + overload
+
+        static int MaxValue(int a, int b)
+        {
+
+            return Math.Max(a, b);
+        }
+
+        static int MaxValue(int a, int b, int c)
+        {
+
+            int bigFromTwo = Math.Max(a, b);
+            return Math.Max(bigFromTwo, c);
+        }
+
+        static int MaxValue(int a, int b, int c, int d)
+        {
+
+            int bigFromTwo = Math.Max(a, b);
+            int bigFromAnotherTwo = Math.Max(c, d);
+            return Math.Max(bigFromTwo, bigFromAnotherTwo);
+        }
+
+
+        //Method that will return min value among all the parameters + overload
+
+        static int MinValue(int a, int b)
+        {
+
+            return Math.Min(a, b);
+        }
+
+        static int MinValue(int a, int b, int c)
+        {
+
+            int bigFromTwo = Math.Min(a, b);
+            return Math.Min(bigFromTwo, c);
+        }
+
+        static int MinValue(int a, int b, int c , int d)
+        {
+
+            int bigFromTwo = Math.Min(a, b);
+            int bigFromAnotherTwo = Math.Min(c, d);
+            return Math.Min(bigFromTwo, bigFromAnotherTwo);
 
         }
 
+        //Method TrySumIfOdd that accepts 2 parameters and returns true if sum of numbers between inputs is odd, otherwise false, sum return as out parameter
+        static bool TrySumIfOdd(int a, int b, out int summa)
+        {
+            summa = 0;
+            for (int i = a; i <= b; i++)
+            {
+                summa += i;
+            }
+
+            if (summa % 2 == 0) return true;
+            else return false;
+        }
+
+
+        //Method Repeat that will accept string X and number N and return X repeated N times
+        //(e.g.Repeat(‘str’, 3) returns ‘strstrstr’ = ‘str’ three times)
+
+
+        static void Repeat (string x, int n)
+        {
+            for (int i = 1; i<=n; i++)
+            {
+                Console.Write(x);
+            }
+          //  return x;
+        }
     }
 }
