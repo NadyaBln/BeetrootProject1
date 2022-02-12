@@ -30,12 +30,14 @@ namespace lesson_4_methods
             IncrementTwo(ref c);
             Console.WriteLine(i); //11
 
-
-            if (TryDivideByThree(i, out int result))
+            //will work if digit will not divid, for ex - 3
+            if (TryDivideByThree(3, out int result))
             {
-                Console.WriteLine("TryDivideByThree "+ result);
+                Console.WriteLine($"TryDivideByThree {result}");
             }
 
+
+           // Console.WriteLine(TryDivideByThree(5));
 
             Concat(10, 20); //30
             Concat("10", "20"); //"10, 20"
@@ -76,7 +78,8 @@ namespace lesson_4_methods
 
 
 
-            Repeat("Ga", 5);
+            //Repeat("Ga", 5);
+            //Console.WriteLine($"{Repeat("Ga", 5)}");
 
         }
         //-----------------------Classwork-part-------------------------------
@@ -143,7 +146,10 @@ namespace lesson_4_methods
             //if divide - true 
             //not divide - false
 
+            //we want to show result of dividing in console
             result = a / 3;
+
+            //will return T / F , without part ', out int result'
             return a % 3 == 0;
            
         }
@@ -240,13 +246,24 @@ namespace lesson_4_methods
         //(e.g.Repeat(‘str’, 3) returns ‘strstrstr’ = ‘str’ three times)
 
 
-        static void Repeat (string x, int n)
-        {
-            for (int i = 1; i<=n; i++)
-            {
-                Console.Write(x);
-            }
-          //  return x;
-        }
+        //as loop
+        //static void Repeat(string x, int n)
+        //{
+            //for (int i = 1; i<=n; i++)
+            //{
+            //    Console.Write(x);
+            //}
+        //}
+
+
+        //as recursion
+        //static string Repeat(string x, int n)
+        //{
+        //   // Console.Write(x);
+        //    if (n==1) return x;
+        //    return Repeat(x, n);
+        //}
+           
+        
     }
 }
