@@ -13,9 +13,9 @@ namespace lesson3_homework
             //two constants(X and Y) and will count the sum of all numbers between these constants.If they are equal then sum should be one of them
             //Example:
 
-            //X=5
-            //Y=2
-            //Sum=2+3+4+5=14
+            //int X = 5;
+            //int Y = 2;
+            //Sum = 2 + 3 + 4 + 5 = 14;
 
             //X=10
             //Y=10
@@ -29,6 +29,15 @@ namespace lesson3_homework
 
             Console.WriteLine("enter B ");
             string b = Console.ReadLine();
+
+            for (int j = 0; j<100000; j++)
+            {
+                //if (j == 6453)
+                if (j == -1)
+                {
+                    Console.WriteLine(j);
+                }
+            }
 
             if ((int.TryParse(a, out int Adigit)) & (int.TryParse(b, out int Bdigit)))
             {
