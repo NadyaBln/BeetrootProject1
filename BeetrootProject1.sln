@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-3", "lesson-3\lesson
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW-lesson-data-types-2", "BeetrootProject1\HW-lesson-data-types-2\HW-lesson-data-types-2.csproj", "{AC114F1A-CA2C-43B1-8F24-0C2276E14559}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-4-methods", "BeetrootProject1\lesson-4-methods\lesson-4-methods.csproj", "{1D0A56F2-B26F-45E8-88DF-B464DDF67C78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-4-methods", "BeetrootProject1\lesson-4-methods\lesson-4-methods.csproj", "{1D0A56F2-B26F-45E8-88DF-B464DDF67C78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-6-arrays-CW", "BeetrootProject1\lesson-6-arrays-CW\lesson-6-arrays-CW.csproj", "{FB1501FF-BE5E-4E36-B445-08AC58CC1CE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{1D0A56F2-B26F-45E8-88DF-B464DDF67C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D0A56F2-B26F-45E8-88DF-B464DDF67C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D0A56F2-B26F-45E8-88DF-B464DDF67C78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB1501FF-BE5E-4E36-B445-08AC58CC1CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB1501FF-BE5E-4E36-B445-08AC58CC1CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB1501FF-BE5E-4E36-B445-08AC58CC1CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB1501FF-BE5E-4E36-B445-08AC58CC1CE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
