@@ -50,11 +50,11 @@ namespace lesson_6_arrays_CW
 
 
             //отобразить индексы всех элементов массива (немного не канонично)
-            i = -1;
+            i = 0;
  
             foreach (int item in array2)
             {
-                Console.WriteLine($"{++i} item of array is {item}");
+                Console.WriteLine($"{i++} item of array is {item}");
             }
 
 

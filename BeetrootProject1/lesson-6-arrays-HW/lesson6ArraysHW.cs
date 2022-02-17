@@ -2,28 +2,27 @@
 
 namespace lesson_6_arrays_HW
 {
-    class Program
+    class lesson6ArraysHW
     {
         static void Main(string[] args)
         {
-        //Homework arrays - 15 feb 2022
-        //Implement 3 sort algorithms:
+            //Homework arrays - 15 feb 2022
+            //Implement 3 sort algorithms:
 
-        //Selection
-        //Bubble
-        //Insertion
+            //Selection
+            //Bubble
+            //Insertion
 
-        //Extra:
-        //Define enum SortAlgorithmType with all 3 algorithms types and create single function Sort that will accept array and SortAlgorithmType and use passed algorithm to sort array
-        //Define enum OrderBy with 2 values: Asc and Desc and update Sort method with this parameter that will change sort order
+            //Extra:
+            //Define enum SortAlgorithmType with all 3 algorithms types and create single function Sort that will accept array and SortAlgorithmType and use passed algorithm to sort array
+            //Define enum OrderBy with 2 values: Asc and Desc and update Sort method with this parameter that will change sort order
 
-
-
-
-        //1 - Bubble sort
+            
             int[] mixedArrayOne = { 74, 2, 57, 42, 23, 98, 65, 8, 9, 876, 32, 0, 44, 22 };
+            int[] mixedArrayTwo = { 32, 6, 21, 887, 8, 99, 12, 0, 18, 23, 255, 42, 50, 89 };
+            int[] mixedArrayThree = { 312, 6, 21, 88, 84, 19, 122, 10, 18, 23, 25, 42, 50, 59 };
 
-
+            //1 - Bubble sort
             //show original array
             Console.WriteLine($"original array 1");
 
@@ -33,12 +32,25 @@ namespace lesson_6_arrays_HW
             }
             Console.WriteLine();
 
-            //show Bubble sorted array
-            Console.WriteLine($"Bubble sorted array");
-
-            foreach (int item in BubbleSort(mixedArrayOne, OrderBy.Asc))
+            //show Bubble sorted array ASC
+            Console.WriteLine($"Bubble sorted array - type ASC");
+            Sort(mixedArrayOne, SortAlgorithmType.BubbleSort, OrderBy.Asc);
+            foreach (int item in mixedArrayOne)
             {
                 Console.Write($"{item}, ");
+
+            }
+            Console.WriteLine();
+
+
+
+            //show Bubble sorted array DESC
+            Console.WriteLine($"Bubble sorted array - type DESC");
+            Sort(mixedArrayOne, SortAlgorithmType.BubbleSort, OrderBy.Desc);
+            foreach (int item in mixedArrayOne)
+            {
+                Console.Write($"{item}, ");
+
             }
             Console.WriteLine();
 
@@ -47,8 +59,8 @@ namespace lesson_6_arrays_HW
 
 
 
-        //2 - Insertion sort
-            int[] mixedArrayTwo = { 32, 6, 21, 887, 8, 99, 12, 0, 18, 23, 255, 42, 50, 89 };
+            //2 - Insertion sort
+
 
             //show original array
             Console.WriteLine($"original array 2");
@@ -69,8 +81,8 @@ namespace lesson_6_arrays_HW
 
 
 
-        //3 - Selection sort
-            int[] mixedArrayThree = { 312, 6, 21, 88, 84, 19, 122, 10, 18, 23, 25, 42, 50, 59 };
+            //3 - Selection sort
+
 
             //show original array
             Console.WriteLine($"original array 3");
@@ -88,13 +100,12 @@ namespace lesson_6_arrays_HW
                 Console.Write($"{item}, ");
             }
 
-            Sort(mixedArrayThree, SortAlgorithmType.SelectionSort, OrderBy.Desc);
 
 
 
         }
 
-        static int [] BubbleSort (int [] array, OrderBy type)
+        static int[] BubbleSort(int[] array, OrderBy type)
         {
             //кол-во проходов по циклу 
             for (int i = 0; i < array.Length; i++)
@@ -102,12 +113,16 @@ namespace lesson_6_arrays_HW
                 //среавнене каждой пары элементов
                 for (int j = 0; j < array.Length - 1; j++)
                 {
-                    //сменяем элементы местами
-                    if (array[j] > array[j + 1])
+                    //type
+                    if (type == OrderBy.Asc ? array[j] > array[j + 1] : array[j] < array[j + 1])
                     {
-                        int temp = array[j];
-                        array[j] = array[j + 1];
-                        array[j + 1] = temp;
+                        //сменяем элементы местами
+                        if (array[j] > array[j + 1])
+                        {
+                            int temp = array[j];
+                            array[j] = array[j + 1];
+                            array[j + 1] = temp;
+                        }
                     }
                 }
             }
@@ -115,14 +130,14 @@ namespace lesson_6_arrays_HW
         }
 
 
-        static int [] InsertionSort (int [] array, OrderBy type)
+        static int[] InsertionSort(int[] array, OrderBy type)
         {
-          //amount of loops
-            for (int i = 0; i< array.Length; i++)
+            //amount of loops
+            for (int i = 0; i < array.Length; i++)
             {
                 int V = array[i];
                 int j = i;
-                while ((j>0) && (array[j - 1] > V))
+                while ((j > 0) && (array[j - 1] > V))
                 {
                     //swap elements
                     int temp = array[j];
@@ -135,7 +150,7 @@ namespace lesson_6_arrays_HW
         }
 
 
-        static int [] SelectionSort (int [] array, OrderBy type, int currIndex = 0)
+        static int[] SelectionSort(int[] array, OrderBy type, int currIndex = 0)
         {
             if (currIndex == array.Length)
                 return array;
@@ -151,10 +166,10 @@ namespace lesson_6_arrays_HW
         }
 
         //search min element in array
-        static int IndexOfMin (int [] array, int n, OrderBy type)
+        static int IndexOfMin(int[] array, int n, OrderBy type)
         {
-            int result = n; 
-            for (int i = n; i <array.Length; i++)
+            int result = n;
+            for (int i = n; i < array.Length; i++)
             {
                 if (array[i] < array[result])
                 {
@@ -183,7 +198,7 @@ namespace lesson_6_arrays_HW
         }
 
 
-        static void Sort (int [] array, SortAlgorithmType sort, OrderBy type)
+        static void Sort(int[] array, SortAlgorithmType sort, OrderBy type)
         {
             switch (sort)
             {
@@ -200,5 +215,5 @@ namespace lesson_6_arrays_HW
                     break;
             }
         }
-}
+    }
 }
