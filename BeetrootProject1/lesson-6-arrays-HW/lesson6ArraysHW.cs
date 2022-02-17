@@ -17,14 +17,14 @@ namespace lesson_6_arrays_HW
             //Define enum SortAlgorithmType with all 3 algorithms types and create single function Sort that will accept array and SortAlgorithmType and use passed algorithm to sort array
             //Define enum OrderBy with 2 values: Asc and Desc and update Sort method with this parameter that will change sort order
 
-            
+
             int[] mixedArrayOne = { 74, 2, 57, 42, 23, 98, 65, 8, 9, 876, 32, 0, 44, 22 };
             int[] mixedArrayTwo = { 32, 6, 21, 887, 8, 99, 12, 0, 18, 23, 255, 42, 50, 89 };
             int[] mixedArrayThree = { 312, 6, 21, 88, 84, 19, 122, 10, 18, 23, 25, 42, 50, 59 };
 
-            //1 - Bubble sort
+        //1 - Bubble sort
             //show original array
-            Console.WriteLine($"original array 1");
+            Console.WriteLine($"original array 1-------------------------------");
 
             foreach (int item in mixedArrayOne)
             {
@@ -43,7 +43,6 @@ namespace lesson_6_arrays_HW
             Console.WriteLine();
 
 
-
             //show Bubble sorted array DESC
             Console.WriteLine($"Bubble sorted array - type DESC");
             Sort(mixedArrayOne, SortAlgorithmType.BubbleSort, OrderBy.Desc);
@@ -59,11 +58,10 @@ namespace lesson_6_arrays_HW
 
 
 
-            //2 - Insertion sort
-
+        //2 - Insertion sort
 
             //show original array
-            Console.WriteLine($"original array 2");
+            Console.WriteLine($"original array 2---------------------------");
             foreach (int item in mixedArrayTwo)
             {
                 Console.Write($"{item}, ");
@@ -71,9 +69,18 @@ namespace lesson_6_arrays_HW
             Console.WriteLine();
 
             //show Insertion sorted array
-            Console.WriteLine($"Insertion sorted array");
+            Console.WriteLine($"Insertion sorted array DESC");
+            Sort(mixedArrayTwo, SortAlgorithmType.InsertionSort, OrderBy.Desc);
+            foreach (int item in mixedArrayTwo)
+            {
+                Console.Write($"{item}, ");
+            }
+            Console.WriteLine();
 
-            foreach (int item in InsertionSort(mixedArrayTwo, OrderBy.Asc))
+            //show Insertion sorted array
+            Console.WriteLine($"Insertion sorted array Asc");
+            Sort(mixedArrayTwo, SortAlgorithmType.InsertionSort, OrderBy.Asc);
+            foreach (int item in mixedArrayTwo)
             {
                 Console.Write($"{item}, ");
             }
@@ -83,19 +90,26 @@ namespace lesson_6_arrays_HW
 
             //3 - Selection sort
 
-
             //show original array
-            Console.WriteLine($"original array 3");
+            Console.WriteLine($"original array 3-----------------------");
             foreach (int item in mixedArrayThree)
             {
                 Console.Write($"{item}, ");
             }
             Console.WriteLine();
 
-            //show Insertion sorted array
-            Console.WriteLine($"Selection sorted array");
+            //show Selection sorted array
+            Console.WriteLine($"Selection sorted array DESC");
+            Sort(mixedArrayThree, SortAlgorithmType.SelectionSort, OrderBy.Desc);
+            foreach (int item in mixedArrayThree)
+            {
+                Console.Write($"{item}, ");
+            }
+            Console.WriteLine();
 
-            foreach (int item in InsertionSort(mixedArrayThree, OrderBy.Desc))
+            Console.WriteLine($"Selection sorted array Asc");
+            Sort(mixedArrayThree, SortAlgorithmType.SelectionSort, OrderBy.Asc);
+            foreach (int item in mixedArrayThree)
             {
                 Console.Write($"{item}, ");
             }
@@ -113,17 +127,14 @@ namespace lesson_6_arrays_HW
                 //среавнене каждой пары элементов
                 for (int j = 0; j < array.Length - 1; j++)
                 {
-                    //type
+                    //сменяем элементы местами
                     if (type == OrderBy.Asc ? array[j] > array[j + 1] : array[j] < array[j + 1])
                     {
-                        //сменяем элементы местами
-                        if (array[j] > array[j + 1])
-                        {
-                            int temp = array[j];
-                            array[j] = array[j + 1];
-                            array[j + 1] = temp;
-                        }
+                        int temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
                     }
+
                 }
             }
             return array;
@@ -137,7 +148,7 @@ namespace lesson_6_arrays_HW
             {
                 int V = array[i];
                 int j = i;
-                while ((j > 0) && (array[j - 1] > V))
+                while ((j > 0) && (type == OrderBy.Asc ? array[j - 1] > V : array[j - 1] < V))
                 {
                     //swap elements
                     int temp = array[j];
@@ -155,23 +166,23 @@ namespace lesson_6_arrays_HW
             if (currIndex == array.Length)
                 return array;
 
-            int index = IndexOfMin(array, currIndex, type);
+            int index = IndexOfEl(array, currIndex, type);
             if (index != currIndex)
             {
                 int temp = array[index];
-                array[index] = array[index];
-                array[index] = temp;
+                array[index] = array[currIndex];
+                array[currIndex] = temp;
             }
             return SelectionSort(array, type, currIndex + 1);
         }
 
         //search min element in array
-        static int IndexOfMin(int[] array, int n, OrderBy type)
+        static int IndexOfEl(int[] array, int n, OrderBy type)
         {
             int result = n;
             for (int i = n; i < array.Length; i++)
             {
-                if (array[i] < array[result])
+                if (type == OrderBy.Asc ? array[i] < array[result] : array[i] > array[result])
                 {
                     result = i;
                 }
@@ -183,7 +194,6 @@ namespace lesson_6_arrays_HW
 
 
         //enum 
-
         enum SortAlgorithmType
         {
             InsertionSort,
