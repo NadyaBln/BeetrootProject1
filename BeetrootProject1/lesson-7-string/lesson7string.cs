@@ -103,42 +103,53 @@ namespace lesson_7_string
             //------------------------------------------------------------------------------
             //Homework 17 feb 2022
 
-
             Console.WriteLine("Enter string A and B");
-            string A = Console.ReadLine();
-            string B = Console.ReadLine();
+            string inputStringA = Console.ReadLine();
+            string inputStringB = Console.ReadLine();
 
-            Console.WriteLine($"Are strings A and B equal: {Compare(A, B)}");
-            Console.WriteLine($"Amount of symbols in string A: {Analyze(A)}");
-            Console.WriteLine($"Alphabetical sorting of string A: {Sort(B)}");
-            Console.WriteLine($"Duplicate chars: {Duplicate(A)}");
-        
+            Console.WriteLine($"Are strings A and B equal: {Compare(inputStringA, inputStringB)}");
+            Console.WriteLine($"Amount of symbols in string A: {Analyze(inputStringA)}");
+            Console.WriteLine($"Alphabetical sorting of string A: {Sort(inputStringA)}");
+            Console.WriteLine($"Duplicate chars: {Duplicate(inputStringA)}");
+
         }
 
 
         static bool Compare(string A, string B)
         {
-            if (A == B) return true;
-            return false;
+            bool result = true;
+            for (int i = 0; i < B.Length; i++)
+            {
+                for (int j = 0; j < B.Length; j++)
+                {
+                    if (B[i] != A[j] | B.Length != A.Length)
+                    {
+                        return false;
+                    } 
+                }
+            }
+            return result;
         }
 
 
         static int Analyze(string A)
         {
-            return A.Length;
+            string trimmed = A.Replace(" ", "");
+            return trimmed.Length;
         }
 
 
         static string Sort(string A)
         {
-            var B = A.ToArray();
-            //кол-во проходов по циклу 
+            string trimmed = A.Replace(" ", "");
+            var B = trimmed.ToArray();
+
             for (int i = 0; i < B.Length; i++)
             {
-                //среавнене каждой пары элементов
+
                 for (int j = 0; j < B.Length - 1; j++)
                 {
-                    //сменяем элементы местами
+
                     if (B[j] > B[j + 1])
                     {
 
