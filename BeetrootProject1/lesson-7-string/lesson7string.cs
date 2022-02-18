@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 
 namespace lesson_7_string
@@ -97,8 +98,77 @@ namespace lesson_7_string
                 : char.ToLower(item);
             }
             Console.WriteLine(output);
+
+
+            //------------------------------------------------------------------------------
+            //Homework 17 feb 2022
+
+
+            Console.WriteLine("Enter string A and B");
+            string A = Console.ReadLine();
+            string B = Console.ReadLine();
+
+            Console.WriteLine($"Are strings A and B equal: {Compare(A, B)}");
+            Console.WriteLine($"Amount of symbols in string A: {Analyze(A)}");
+            Console.WriteLine($"Alphabetical sorting of string A: {Sort(B)}");
+            Console.WriteLine($"Duplicate chars: {Duplicate(A)}");
+        
+        }
+
+
+        static bool Compare(string A, string B)
+        {
+            if (A == B) return true;
+            return false;
+        }
+
+
+        static int Analyze(string A)
+        {
+            return A.Length;
+        }
+
+
+        static string Sort(string A)
+        {
+            var B = A.ToArray();
+            //кол-во проходов по циклу 
+            for (int i = 0; i < B.Length; i++)
+            {
+                //среавнене каждой пары элементов
+                for (int j = 0; j < B.Length - 1; j++)
+                {
+                    //сменяем элементы местами
+                    if (B[j] > B[j + 1])
+                    {
+
+                        char temp = B[j];
+                        B[j] = B[j + 1];
+                        B[j + 1] = temp;
+                    }
+                }
+            }
+            return new string(B);
+        }
+
+        static string Duplicate(string A)
+        {
+            string output = string.Empty;
+            for (int i = 0; i < A.Length; i++)
+            {
+                for (int j = 0; j < A.Length; j++)
+                {
+                    if (i != j && A[i] == A[j] && !output.Contains(A[i]))
+                    {
+                        output += A[i];
+                    }
+                }
+            }
+            return output;
         }
 
     }
+
 }
+
 
