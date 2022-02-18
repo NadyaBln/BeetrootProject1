@@ -3,7 +3,7 @@ using System.Text;
 
 namespace lesson_7_string
 {
-    class Program
+    class lesson7string
     {
         static void Main(string[] args)
         {
@@ -92,7 +92,7 @@ namespace lesson_7_string
 
             foreach (var item in input)
             {
-                output  += char.IsLower(item)
+                output += char.IsLower(item)
                 ? char.ToUpper(item)
                 : char.ToLower(item);
             }
