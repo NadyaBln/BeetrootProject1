@@ -43,6 +43,12 @@ namespace HW_lesson_data_types_2
 
             double passedFromNewYear = (dateToday - firstDayOf2022).TotalDays;
             Console.WriteLine("days passed from New Year - " + passedFromNewYear);
+
+
+   
+
+
+            
         }
     }
 }
