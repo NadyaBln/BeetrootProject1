@@ -9,51 +9,86 @@ namespace lesson_8_text
         static void Main(string[] args)
         {
 
-            //classwork text 19 feb 2022
+            ////classwork text 19 feb 2022
 
-            var filePath = "C:/Users/Acer/source/repos/lesson8text.csv";
-            var content = GetBook(filePath);
+            //var filePath = "C:/Users/Acer/source/repos/lesson8text.csv";
+            //var content = GetBook(filePath);
 
-            //string sptit for several strings var 1
-            string[] names = content.Split("\r\n"); //end of each string
+            ////string sptit for several strings var 1
+            //string[] names = content.Split("\n"); //end of each string
 
-            //build regex to find correct part. check string match to pattern
-            Regex regex = new Regex(@"^(\w+);(\d+)$");
+            ////build regex to find correct part. check string match to pattern
+            //Regex regex = new Regex(@"^(\w+);(\d+)$");
 
-            var book = new (string name, int number)[names.Length];
+            ////tuple. array with length of one string
+            //var book = new (string name, int number)[names.Length];
 
-            for (var index = 0; index < names.Length; index++)
+            //for (var index = 0; index < names.Length-1; index++)
+            //{
+            //    //check that each string in files matches with template 
+            //    var item = names[index];
+            //    var match = regex.Match(item);
+            //    Console.WriteLine($"item {item} match {match.Success}");
+
+            //    if (match.Success)
+            //    {
+            //        book[index].name = match.Groups[1].Value;
+            //        book[index].number = int.Parse(match.Groups[2].Value);
+            //    }
+            //}
+
+            //foreach (var item in book)
+            //{
+            //    Console.WriteLine($"{item.name} which phone number is {item.number}");
+            //}
+
+            //foreach (var item in names)
+            //{
+            //    // Console.WriteLine(item);
+            //    var match = regex.Match(item);
+            //    Console.WriteLine($"item {item} match {match.Success}");
+            //}
+
+            //var random = new Random();
+            //book[0].number = random.Next();
+
+            ////ToFile(book, filePath);
+
+            ////var 2
+            //// Console.WriteLine(content);
+
+
+
+
+
+            //---------homework---------------------------------------------------------
+            //Provide ability to search in phone book by any criteria(first / last name or phone number)
+
+            var hwFilePath = "C:/Users/Acer/source/repos/phoneBookForHW.csv";
+            Regex regexHW = new Regex(@"^(\w+);(\w+);(\d+)$");
+            var contentHW = GetBook(hwFilePath);
+            string[] personStringHW = contentHW.Split("\n"); //end of each string
+            
+            //create new data type by tulple
+            var phoneBookHW = new (string name, string surname, int number)[personStringHW.Length];
+
+            for (var index = 0; index < personStringHW.Length - 1; index++)
             {
-                var item = names[index];
-                var match = regex.Match(item);
-                Console.WriteLine($"item {item} match {match.Success}");
+                var item = personStringHW[index];
+                var match = regexHW.Match(item);
+               Console.WriteLine($"AAA SSS item {item} match {match.Success}");
 
                 if (match.Success)
                 {
-                    book[index].name = match.Groups[1].Value;
-                    book[index].number = int.Parse(match.Groups[2].Value);
+                    phoneBookHW[index].name = match.Groups[1].Value;
+                    phoneBookHW[index].surname = match.Groups[2].Value;
+                    phoneBookHW[index].number = int.Parse(match.Groups[3].Value);
+                    Console.WriteLine($"in file {phoneBookHW}");
                 }
             }
 
-            foreach (var item in book)
-            {
-                Console.WriteLine($"{item.name} which phone number is {item.number}");
-            }
+     
 
-            foreach (var item in names)
-            {
-                // Console.WriteLine(item);
-                var match = regex.Match(item);
-                Console.WriteLine($"item {item} match {match.Success}");
-            }
-
-            var random = new Random();
-            book[0].number = random.Next();
-
-            ToFile(book, filePath);
-
-            //var 2
-            // Console.WriteLine(content);
         }
         static string GetBook(string filePath)
         {
@@ -67,16 +102,52 @@ namespace lesson_8_text
         //string b;
         //(int a, string b) q;
         //q.a;
-        static void ToFile((string name, int number)[] content, string filePath)
-        {
-            string toFileStr = string.Empty;
-            foreach (var item in content)
-            {
-                toFileStr += $"{item.name};{item.number}\n";
-            }
+        //static void ToFile((string name, int number)[] content, string filePath)
+        //{
+        //    string toFileStr = string.Empty;
+        //    foreach (var item in content)
+        //    {
+        //        toFileStr += $"{item.name};{item.number}\n";
+        //    }
 
-            File.WriteAllText(filePath, toFileStr);
-        }
+        //    File.WriteAllText(filePath, toFileStr);
+        //}
 
+
+        //---------homework--------------------------------------------------------------
+        //enum SearchBy
+        //{
+        //    Name,
+        //    Surname,
+        //    Phone
+        //}
+
+        //static string SearchByFieldInPhoneBook(string path, SearchBy field)
+        //{
+        //    switch (field)
+        //    {
+        //        case SearchBy.Name:
+        //            break;
+        //        case SearchBy.Surname:
+        //            break;
+        //        case SearchBy.Phone:
+        //            break;
+        //    }
+        //}
+
+        //static string SearchByField(string nameOfUser, Regex regex)
+        //{
+            
+        //}
+
+        //static string SearchByField(string surnameOfUser, Regex regex)
+        //{
+            
+        //}
+
+        //static string SearchByField(int phone, Regex regex)
+        //{
+            
+        //}
     }
 }
