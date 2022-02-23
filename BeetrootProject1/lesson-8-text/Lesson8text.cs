@@ -67,27 +67,44 @@ namespace lesson_8_text
             var hwFilePath = "C:/Users/Acer/source/repos/phoneBookForHW.csv";
             Regex regexHW = new Regex(@"^(\w+);(\w+);(\d+)$");
             var contentHW = GetBook(hwFilePath);
-            string[] personStringHW = contentHW.Split("\n"); //end of each string
+            string[] personStringHW = contentHW.Split("\r\n"); //end of each string
             
             //create new data type by tulple
             var phoneBookHW = new (string name, string surname, int number)[personStringHW.Length];
 
-            for (var index = 0; index < personStringHW.Length - 1; index++)
+            Console.WriteLine("Enter name / suraname / phone or it part");
+            string userImput = Console.ReadLine();
+
+            //int.TryParse(userImput, out int userImputInt);
+
+            //check that content in file matches with template
+            for (var index = 0; index < personStringHW.Length; index++)
             {
                 var item = personStringHW[index];
                 var match = regexHW.Match(item);
-               Console.WriteLine($"AAA SSS item {item} match {match.Success}");
+            //   Console.WriteLine($"item {item} match {match.Success}");
 
                 if (match.Success)
                 {
                     phoneBookHW[index].name = match.Groups[1].Value;
                     phoneBookHW[index].surname = match.Groups[2].Value;
                     phoneBookHW[index].number = int.Parse(match.Groups[3].Value);
-                    Console.WriteLine($"in file {phoneBookHW}");
                 }
-            }
 
-     
+                //if (userImput.Contains(phoneBookHW[index].name) | userImput.Contains(phoneBookHW[index].surname))
+                //{
+                //    Console.WriteLine($"Search result: {item}");
+                //}
+                
+                //Console.WriteLine("Nothing found");
+            }
+            if (userImput.Contains(item.name))
+
+          
+
+
+
+
 
         }
         static string GetBook(string filePath)
@@ -135,19 +152,19 @@ namespace lesson_8_text
         //    }
         //}
 
-        //static string SearchByField(string nameOfUser, Regex regex)
+        //static string SearchByField(string userImput)
         //{
-            
+        //    if (userImput == )
         //}
 
         //static string SearchByField(string surnameOfUser, Regex regex)
         //{
-            
+
         //}
 
         //static string SearchByField(int phone, Regex regex)
         //{
-            
+
         //}
     }
 }
