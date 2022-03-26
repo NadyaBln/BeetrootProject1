@@ -14,5 +14,10 @@ namespace lesson_10_OOP.Phone_Book
         {
             this.Name = name;
         }
+
+        public void SetName (string name)
+        {
+            this.Name = name;
+        }
     }
 }

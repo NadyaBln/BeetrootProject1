@@ -39,13 +39,9 @@ namespace lesson_10_OOP
                 otherRecord
             });
 
-            //can put it here on in class Phonebook
-            //foreach (var item in book.Persons)
-            //{
-            //    item.Print();
-            //}
-            record.Print();
+            record.Person.SetName("Alexx");
             book.Print();
+            //record.Print();
         }
     }
 }
