@@ -22,23 +22,21 @@ namespace lesson_10_OOP_HW
             Console.WriteLine(secondAuthor.GetInfo());
 
             //class Book instance
-            Library_Dir.Book firstBook = new("Fandorin", firstAuthor, "drama", 1997);
-            Library_Dir.Book secondBook = new("Kobzar", secondAuthor, "history", 1850);
+            Library_Dir.Book firstBook = new("Fandorin", "drama", 1997);
+            Library_Dir.Book secondBook = new("Kobzar", "history", 1850);
             
-            //Library_Dir.Book secondBook = new("Kobzar", "history", 1850);
-            //Library_Dir.LibraryItem secondBook = new(secondAuthor.FullName, secondBook.BookName);
             Console.WriteLine(firstBook.GetInfo());
             Console.WriteLine(secondBook.GetInfo());
 
             var libraryItemOne = new Library_Dir.LibraryItem(firstAuthor, firstBook);
             var libraryItrmTwo = new Library_Dir.LibraryItem(secondAuthor, secondBook);
 
-            Library item = new Library(new LibraryItem[]
+            Library L = new (new LibraryItem[]
                {libraryItemOne,
                 libraryItrmTwo
                });
 
-            item.PrintLibrary();
+            L.PrintLibrary();
         }
     }
 }
