@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-7-string", "Beetroot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-8-text", "BeetrootProject1\lesson-8-text\lesson-8-text.csproj", "{FFD0AB11-F7BB-4073-A27B-AF1EB57C61A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-8-text-HW", "BeetrootProject1\lesson-8-text-HW\lesson-8-text-HW.csproj", "{B6FFED96-F57B-4B0A-B7FF-19CFCC92E0A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-8-text-HW", "BeetrootProject1\lesson-8-text-HW\lesson-8-text-HW.csproj", "{B6FFED96-F57B-4B0A-B7FF-19CFCC92E0A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-8-text-v2", "BeetrootProject1\lesson-8-text-v2\lesson-8-text-v2.csproj", "{89E902FF-22A9-48B7-8169-ED1E487F7640}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{B6FFED96-F57B-4B0A-B7FF-19CFCC92E0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6FFED96-F57B-4B0A-B7FF-19CFCC92E0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6FFED96-F57B-4B0A-B7FF-19CFCC92E0A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89E902FF-22A9-48B7-8169-ED1E487F7640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89E902FF-22A9-48B7-8169-ED1E487F7640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89E902FF-22A9-48B7-8169-ED1E487F7640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89E902FF-22A9-48B7-8169-ED1E487F7640}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
