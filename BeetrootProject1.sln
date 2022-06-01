@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-10-OOP-HW", "Beetroo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-8-text-v2", "BeetrootProject1\lesson-8-text-v2\lesson-8-text-v2.csproj", "{89E902FF-22A9-48B7-8169-ED1E487F7640}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-13-inheritance-CW", "BeetrootProject1\lesson-13-inheritance-CW\lesson-13-inheritance-CW.csproj", "{36B7CDF2-423C-469C-AE2A-15AE17ECC153}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-13-inheritance-CW", "BeetrootProject1\lesson-13-inheritance-CW\lesson-13-inheritance-CW.csproj", "{36B7CDF2-423C-469C-AE2A-15AE17ECC153}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-14-AbstrClassAndInterfaces-CW", "BeetrootProject1\lesson-14-AbstrClassAndInterfaces-CW\lesson-14-AbstrClassAndInterfaces-CW.csproj", "{2A0AEF96-7236-4DBA-B8FB-80CEB1DCDC24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{36B7CDF2-423C-469C-AE2A-15AE17ECC153}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36B7CDF2-423C-469C-AE2A-15AE17ECC153}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36B7CDF2-423C-469C-AE2A-15AE17ECC153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A0AEF96-7236-4DBA-B8FB-80CEB1DCDC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A0AEF96-7236-4DBA-B8FB-80CEB1DCDC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A0AEF96-7236-4DBA-B8FB-80CEB1DCDC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A0AEF96-7236-4DBA-B8FB-80CEB1DCDC24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
