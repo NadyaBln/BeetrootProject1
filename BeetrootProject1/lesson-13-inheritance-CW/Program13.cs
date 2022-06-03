@@ -2,7 +2,7 @@
 
 namespace lesson_13_inheritance_CW
 {
-    class Program
+    class Program13
     {
         static void Main(string[] args)
         {
