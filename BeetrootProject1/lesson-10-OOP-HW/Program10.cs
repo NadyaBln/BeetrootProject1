@@ -3,7 +3,7 @@ using System;
 
 namespace lesson_10_OOP_HW
 {
-    class Program
+    class Program10
     {
         static void Main(string[] args)
         {

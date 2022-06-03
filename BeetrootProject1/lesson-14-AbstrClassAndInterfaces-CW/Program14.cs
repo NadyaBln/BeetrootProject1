@@ -3,7 +3,7 @@ using System.Net.Http;
 
 namespace lesson_14_AbstrClassAndInterfaces_CW
 {
-    class Program
+    class Program14
     {
         public static void Main(string[] args)
         {
