@@ -34,6 +34,24 @@ namespace lesson_14_AbstrctClassInterface_HW
 
             Console.WriteLine(Tshort_1.GetFullProductInfo());
             Tshort_1.Badge(new TshortBadge());
+
+            Individual Person1 = new Individual();
+            Person1.BuyerCategory = "Individual";
+            Person1.City = "Kyiv";
+            Person1.FullName = "Ivan Ivanov";
+            Person1.BirthDate = "01/01/91";
+            Person1.Age = 45;
+
+            Console.WriteLine(Person1.FullInfoAboutBuyer());
+
+            Entrepreneur Company1 = new Entrepreneur();
+            Company1.BuyerCategory = "Entrepreneur";
+            Company1.City = "Lviv";
+            Company1.FullName = "Dasha Plov";
+            Company1.CompanyName = "Roga";
+            Company1.PolicyId = 323242;
+
+            Console.WriteLine(Company1.FullInfoAboutBuyer());
         }
 
         public abstract class Buyer
@@ -42,15 +60,29 @@ namespace lesson_14_AbstrctClassInterface_HW
             public string City;
             public string BuyerCategory;
 
-            public abstract void FullInfoAboutByer();
+            public abstract string FullInfoAboutBuyer();
             public abstract void GetOrder();
         }
 
         public class Entrepreneur : Buyer
         {
-            public override void FullInfoAboutByer()
+            public string CompanyName;
+            public int PolicyId;
+            public Entrepreneur(string fullName, string city, string BuyerCategory, string companyName, int policyId)
             {
-                
+                this.FullName = fullName;
+                this.City = city;
+                this.BuyerCategory = BuyerCategory;
+                this.CompanyName = companyName;
+                this.PolicyId = policyId;
+            }
+            public Entrepreneur()
+            {
+
+            }
+            public override string FullInfoAboutBuyer()
+            {
+                return $"Buyer category: {BuyerCategory}, Name {FullName}, City: {City}, Id: {PolicyId}, Company Name: {CompanyName}";
             }
             public override void GetOrder()
             {
@@ -60,9 +92,23 @@ namespace lesson_14_AbstrctClassInterface_HW
 
         public class Individual : Buyer
         {
-            public override void FullInfoAboutByer()
+            public int Age;
+            public string BirthDate;
+            public Individual (string fullName, string city, string BuyerCategory, string bitrhDate, int age)
+            {
+                this.FullName = fullName;
+                this.City = city;
+                this.BuyerCategory = BuyerCategory;
+                this.Age = age;
+                this.BirthDate = bitrhDate;
+            }
+             public Individual()
             {
 
+            }
+            public override string FullInfoAboutBuyer()
+            {
+                return $"Buyer category: {BuyerCategory}, Name {FullName}, City: {City}, Age: {Age}, Bitrh Date: {BirthDate}";
             }
             public override void GetOrder()
             {
