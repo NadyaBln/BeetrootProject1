@@ -54,11 +54,7 @@ namespace lesson_14_AbstrClassAndInterfaces_CW
 
             //we can inherit only 1 abstract class
             public abstract void Noise(INotification notification);
-
-            //public void ExMethod()
-            //{
             //    can add realization here. 
-            //}
         }
 
         public class Cat : Animal
