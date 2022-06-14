@@ -2,17 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Lesson_17_Collections_CW
+namespace Lesson17.Collections
 {
     public class Set<T> : ICollection<T>
     {
-        private LinkedList<T>[] array;
-        private int capacity;
+        private readonly LinkedList<T>[] _array;
+        private readonly int _capacity;
 
         public Set(int capacity)
         {
-            this.array = new LinkedList<T>[capacity];
-            this.capacity = capacity;
+            this._array = new LinkedList<T>[capacity];
+            this._capacity = capacity;
         }
 
         public IEnumerator<T> GetEnumerator()
@@ -29,11 +29,13 @@ namespace Lesson_17_Collections_CW
             }
             else
             {
-                var index = item.GetHashCode() % this.capacity;
-                var list = this.array[index] ?? new LinkedList<T>();
+                var index = item.GetHashCode() % this._capacity;
+                //if list from array = null -> create new list
+                var list = this._array[index] ?? new LinkedList<T>();
 
                 list.Add(item);
-                this.array[index] = list;
+                //return list into array
+                this._array[index] = list;
             }
         }
 
@@ -44,21 +46,22 @@ namespace Lesson_17_Collections_CW
 
         public bool Contains(T item)
         {
+            //check is there anything
             if (item == null)
             {
-                Console.WriteLine("Item is null");
+                throw new ArgumentNullException();
             }
             else
             {
-                int index = item.GetHashCode() % this.capacity;         // 5
-                LinkedList<T> list = this.array[index];                 // getting a 5th list of array
+                int index = item.GetHashCode() % this._capacity; // 5
+                LinkedList<T> list = this._array[index]; // getting a 5th list of array
 
                 if (list == null)
                 {
                     return false;
                 }
 
-                return list.Contains(item);                             // if item in a 5th list
+                return list.Contains(item); // if item in a 5th list
             }
 
             return false;
@@ -71,11 +74,6 @@ namespace Lesson_17_Collections_CW
 
         public bool Remove(T item)
             => throw new System.NotImplementedException();
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
 
         public int Count { get; }
 
