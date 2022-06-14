@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
@@ -39,6 +39,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-16-Gererics-CW", "BeetrootProject1\lesson-16-Gererics-CW\lesson-16-Gererics-CW.csproj", "{B8AD978D-54DF-46F5-87EA-16EB6196DB26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-14-AbstrClAndInterf-2-HW", "BeetrootProject1\lesson-14-AbstrClAndInterf-2-HW\lesson-14-AbstrClAndInterf-2-HW.csproj", "{17C4E4B8-B118-4802-ADBC-C744EED8AFDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -106,10 +108,14 @@ Global
 		{8CCC6E4C-33E3-422B-8D31-61DFC6AF4C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CCC6E4C-33E3-422B-8D31-61DFC6AF4C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CCC6E4C-33E3-422B-8D31-61DFC6AF4C72}.Release|Any CPU.Build.0 = Release|Any CPU
-		{97C2C4AE-9210-4772-9A39-61E16FAAAA7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97C2C4AE-9210-4772-9A39-61E16FAAAA7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97C2C4AE-9210-4772-9A39-61E16FAAAA7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97C2C4AE-9210-4772-9A39-61E16FAAAA7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8AD978D-54DF-46F5-87EA-16EB6196DB26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8AD978D-54DF-46F5-87EA-16EB6196DB26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8AD978D-54DF-46F5-87EA-16EB6196DB26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8AD978D-54DF-46F5-87EA-16EB6196DB26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17C4E4B8-B118-4802-ADBC-C744EED8AFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17C4E4B8-B118-4802-ADBC-C744EED8AFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17C4E4B8-B118-4802-ADBC-C744EED8AFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17C4E4B8-B118-4802-ADBC-C744EED8AFDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

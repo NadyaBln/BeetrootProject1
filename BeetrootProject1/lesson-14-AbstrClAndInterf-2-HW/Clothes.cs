@@ -18,7 +18,7 @@ namespace lesson_14_AbstrctClassInterface_HW
             public abstract void PrintClo();
             public enum ClothesCategories
             {
-                Pants, 
+                Pants,
                 Tshort
             }
             public enum CloGender
@@ -51,7 +51,7 @@ namespace lesson_14_AbstrctClassInterface_HW
             {
                 return $"Full Product Info about # {ItemId}: Name: {ItemName}, Length: {Length}, Sex: {ClGender}, Color: {Color}";
             }
-            public override bool IsClothesAvailable() => Quantity > 0 ? true: false;
+            public override bool IsClothesAvailable() => Quantity > 0 ? true : false;
 
             public override void PrintClo()
             {
@@ -95,3 +95,4 @@ namespace lesson_14_AbstrctClassInterface_HW
         }
     }
 }
+
