@@ -35,6 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-15-Struct-CW", "Beet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson-17-Collections-CW", "BeetrootProject1\Lesson-17-Collections-CW\Lesson-17-Collections-CW.csproj", "{97C2C4AE-9210-4772-9A39-61E16FAAAA7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-20-extensions-CW", "BeetrootProject1\lesson-20-extensions-CW\lesson-20-extensions-CW.csproj", "{98B5ABC7-62C7-484D-836D-B9D995F78A4E}"
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-19-Delegates", "BeetrootProject1\lesson-19-Delegates\lesson-19-Delegates.csproj", "{55744503-F060-4111-8BBA-22CC1A645093}"
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{03660117-06BE-43AF-9532-4038456ABA69}"
 	ProjectSection(SolutionItems) = preProject
@@ -113,6 +114,10 @@ Global
 		{97C2C4AE-9210-4772-9A39-61E16FAAAA7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97C2C4AE-9210-4772-9A39-61E16FAAAA7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97C2C4AE-9210-4772-9A39-61E16FAAAA7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98B5ABC7-62C7-484D-836D-B9D995F78A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98B5ABC7-62C7-484D-836D-B9D995F78A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98B5ABC7-62C7-484D-836D-B9D995F78A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98B5ABC7-62C7-484D-836D-B9D995F78A4E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{55744503-F060-4111-8BBA-22CC1A645093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{55744503-F060-4111-8BBA-22CC1A645093}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55744503-F060-4111-8BBA-22CC1A645093}.Release|Any CPU.ActiveCfg = Release|Any CPU
