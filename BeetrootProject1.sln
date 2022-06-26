@@ -55,7 +55,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson23.Domain", "Beetroot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson23.Contracts", "BeetrootProject1\lesson-23-Dependencies\Lesson23.Contracts\Lesson23.Contracts.csproj", "{B3CA46DA-8B9F-44EB-A387-938DDC7C5DEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson-24-Sync", "BeetrootProject1\Lesson-24-Sync\Lesson-24-Sync.csproj", "{DA66D25D-A33F-41F1-959D-BC798B6091AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson-24-Sync", "BeetrootProject1\Lesson-24-Sync\Lesson-24-Sync.csproj", "{DA66D25D-A33F-41F1-959D-BC798B6091AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-17-Collections-HW", "BeetrootProject1\lesson-17-Collections-HW\lesson-17-Collections-HW.csproj", "{3560AF36-2274-4853-B247-C65E25FE9C24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -163,6 +165,10 @@ Global
 		{DA66D25D-A33F-41F1-959D-BC798B6091AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA66D25D-A33F-41F1-959D-BC798B6091AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA66D25D-A33F-41F1-959D-BC798B6091AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3560AF36-2274-4853-B247-C65E25FE9C24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3560AF36-2274-4853-B247-C65E25FE9C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3560AF36-2274-4853-B247-C65E25FE9C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3560AF36-2274-4853-B247-C65E25FE9C24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
