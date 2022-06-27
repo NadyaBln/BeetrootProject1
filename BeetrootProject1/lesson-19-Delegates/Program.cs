@@ -92,7 +92,7 @@ namespace lesson_19_Delegates
             int from = 10;
             string to;
             var selecter = new Selecter();
-            selecter.Select(array2[], (array2, to) => Console.WriteLine($"{array2}"));
+            //selecter.Select(array2[], (array2, to) => Console.WriteLine($"{array2}"));
         }
 
 
