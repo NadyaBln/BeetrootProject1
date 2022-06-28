@@ -7,6 +7,7 @@ namespace Lesson23_Contracts
     {
         public string Name { get; set; }
 
+        
         public List<Meeting> Meetings { get; set; }
     }
 }

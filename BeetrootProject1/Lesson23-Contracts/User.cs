@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace Lesson23_Contracts
 {
+
     public class User
     {
         public string Name { get; set; }

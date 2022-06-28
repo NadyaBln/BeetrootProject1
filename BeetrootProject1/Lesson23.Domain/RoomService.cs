@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace Lesson23.Domain
 {
     public class RoomService
