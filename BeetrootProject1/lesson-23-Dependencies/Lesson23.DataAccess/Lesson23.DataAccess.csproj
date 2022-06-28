@@ -4,8 +4,4 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Lesson23.Contracts\Lesson23.Contracts.csproj" />
-  </ItemGroup>
-
 </Project>

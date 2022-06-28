@@ -10,9 +10,4 @@
     <PackageReference Include="CommandLineParser" Version="2.9.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="Lesson23.Contracts\Lesson23.Contracts.csproj" />
-    <ProjectReference Include="Lesson23.Domain\Lesson23.Domain.csproj" />
-  </ItemGroup>
-
 </Project>

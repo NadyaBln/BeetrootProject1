@@ -12,52 +12,65 @@ namespace Lesson_24_Sync
         static async Task Main(string[] args)
         {
             ////diff ways wait task
+            ////await - wait for task finish smth
             //await PourACupOfCoffee();
-            //var coffee =  PourACupOfCoffee();
-            //var tea =  PourACupOfTea();
+
+            //var coffee = PourACupOfCoffee();
+            //var tea = PourACupOfTea();
 
             //Task<string> drink = await Task.WhenAny(coffee, tea);
-            //Console.WriteLine(drink.Result);
+            //Console.WriteLine($"when any: {drink.Result}");
 
             //await HeatUpSmth();
 
             //var shower = TakeAShower();
             //var teeth = WashTeeth();
 
-            ////waiting for finish
+            ////waiting for finish shower and teeth
             //await Task.WhenAll(shower, teeth);
 
             //TakeAShower().Wait();
             //WashTeeth().GetAwaiter().GetResult();
-            //await AddBread();
+            //await AddBread().ConfigureAwait(false);
             //await AddJam().ContinueWith(x => Console.WriteLine($"task is finished with status {x.Status}"));
+            
             //await ScreamAsync();
 
 
+            //API
+            // 1 - make new httpclient
             var httpClient = new HttpClient();
+
+            // 2 - we sends request to server
             var requestMessage =  new HttpRequestMessage
             {
+                //link where we sends message
                 RequestUri = new Uri("https://foodish-api.herokuapp.com/api")
             };
+
+            //response 
             var responceMessage = await httpClient.SendAsync(requestMessage);
+
+            //read as string
             var stringResponce = await responceMessage.Content.ReadAsStringAsync();
-            Console.WriteLine(stringResponce);
+            //here we get JSON
+            Console.WriteLine($"response in JSON format: {stringResponce}");
 
-
-            var image = JsonConvert.DeserializeObject<ImgResponce>(stringResponce);
-
-            Console.WriteLine(stringResponce);
+            // 3 - deserialize resonse from JSON 
+            ImgResponce image = JsonConvert.DeserializeObject<ImgResponce>(stringResponce);
             Console.WriteLine($"got img with url {image.Image}");
 
-            var imageResponce = await httpClient.SendAsync(new HttpRequestMessage
+            // 4 - make new http request
+            HttpResponseMessage imageResponce = await httpClient.SendAsync(new HttpRequestMessage
             {
                 RequestUri = new Uri(image.Image)
             });
 
-            await using var stream = await imageResponce.Content.ReadAsStreamAsync();
+            //read it as stream 
+            await using Stream stream = await imageResponce.Content.ReadAsStreamAsync();
 
-            //wrte to file
-            using (var fileStream = File.Create("food.jpg"))
+            //write to file
+            using (FileStream fileStream = File.Create("food.jpg"))
             {
                 stream.Seek(0, SeekOrigin.Begin);
                 stream.CopyTo(fileStream);
@@ -73,7 +86,7 @@ namespace Lesson_24_Sync
 
         private static async Task<string> PourACupOfTea()
         {
-            await Task.Delay(1000);
+            await Task.Delay(2000);
             return "Make aa tea";
         }
 
@@ -117,6 +130,7 @@ namespace Lesson_24_Sync
             return Task.Run(() => Scream());
         }
 
+        //API
         private class ImgResponce
         {
             public string Image { get; set; }
