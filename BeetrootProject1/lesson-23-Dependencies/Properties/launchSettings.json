@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "lesson-23-Dependencies": {
+      "commandName": "Project",
+      "commandLineArgs": "Hi there",
+      "remoteDebugEnabled": false
+    }
+  }
+}

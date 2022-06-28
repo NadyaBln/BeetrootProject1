@@ -1,12 +1,38 @@
-﻿using System;
+﻿using CommandLine;
+using Lesson23.DataAccess;
+using Lesson23.Domain;
+using System;
 
 namespace lesson_23_Dependencies
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var service = new RoomService(new FileDataAccess());
+            var rooms = service.GetAll();
+
+            foreach (var item in args)
+            {
+                Console.WriteLine(item);
+            }
+
+            Parser.Default.ParseArguments<Options>(args)
+                .WithParsed<Options>(o =>
+                {
+                    if (!string.IsNullOrEmpty(o.Name))
+                    {
+                        Console.WriteLine(o.Name);
+                    }
+                });
+        }
+        public class Options
+        {
+            [Option('v', "verbose", Required = false, HelpText = "Set output to verbose messages.")]
+            public bool Verbose { get; set; }
+
+            [Option('n', "name", Required = false, HelpText = "Set output to verbose messages.")]
+            public string Name { get; set; }
         }
     }
 }

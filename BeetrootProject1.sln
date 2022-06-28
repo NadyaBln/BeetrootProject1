@@ -47,7 +47,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-16-Gererics-CW", "Be
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-14-AbstrClAndInterf-2-HW", "BeetrootProject1\lesson-14-AbstrClAndInterf-2-HW\lesson-14-AbstrClAndInterf-2-HW.csproj", "{17C4E4B8-B118-4802-ADBC-C744EED8AFDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-21-LINQ-CW", "BeetrootProject1\lesson-21-LINQ-CW\lesson-21-LINQ-CW.csproj", "{F7910CC7-3516-4F67-8BEE-B18B30F33F70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-21-LINQ-CW", "BeetrootProject1\lesson-21-LINQ-CW\lesson-21-LINQ-CW.csproj", "{F7910CC7-3516-4F67-8BEE-B18B30F33F70}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-22-Reflection", "BeetrootProject1\lesson-22-Reflection\lesson-22-Reflection.csproj", "{559BDA53-D5ED-485B-9B2A-1DEB5ADC0B32}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-23-Dependencies", "BeetrootProject1\lesson-23-Dependencies\lesson-23-Dependencies.csproj", "{669B76AC-5D7A-4A4E-8250-72AB34DA5793}"
@@ -58,8 +59,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson23.Contracts", "Beetr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson-24-Sync", "BeetrootProject1\Lesson-24-Sync\Lesson-24-Sync.csproj", "{DA66D25D-A33F-41F1-959D-BC798B6091AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-17-Collections-HW", "BeetrootProject1\lesson-17-Collections-HW\lesson-17-Collections-HW.csproj", "{3560AF36-2274-4853-B247-C65E25FE9C24}"
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson-19-Delegates-HW", "BeetrootProject1\Lesson-19-Delegates-HW\Lesson-19-Delegates-HW.csproj", "{C52148E3-08EC-46A6-8E0A-942ABF29B16E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-17-Collections-HW", "BeetrootProject1\lesson-17-Collections-HW\lesson-17-Collections-HW.csproj", "{3560AF36-2274-4853-B247-C65E25FE9C24}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson-19-Delegates-HW", "BeetrootProject1\Lesson-19-Delegates-HW\Lesson-19-Delegates-HW.csproj", "{C52148E3-08EC-46A6-8E0A-942ABF29B16E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson23.DataAccess", "BeetrootProject1\lesson-23-Dependencies\Lesson23.DataAccess\Lesson23.DataAccess.csproj", "{67272A6D-6619-446B-884A-15E19646DE85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -179,6 +183,10 @@ Global
 		{C52148E3-08EC-46A6-8E0A-942ABF29B16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C52148E3-08EC-46A6-8E0A-942ABF29B16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C52148E3-08EC-46A6-8E0A-942ABF29B16E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67272A6D-6619-446B-884A-15E19646DE85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67272A6D-6619-446B-884A-15E19646DE85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67272A6D-6619-446B-884A-15E19646DE85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67272A6D-6619-446B-884A-15E19646DE85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

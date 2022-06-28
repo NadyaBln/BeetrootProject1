@@ -100,7 +100,7 @@ namespace lesson_21_LINQ_CW
             // 2 - count number for males and females
             Console.WriteLine(persons.Count());
             Console.WriteLine($"female: {persons.Where(x => x.Gender == Gender.Female).Count()}");
-            Console.WriteLine($"male: {persons.Where(x => x.Gender == Gender.Male).Count()}");
+            Console.WriteLine($"male: {persons.Count(x => x.Gender == Gender.Male)}");
 
 
             // 3 - find average age of all persons;
@@ -140,6 +140,20 @@ namespace lesson_21_LINQ_CW
 
             var brownEye = persons.Where(x => x.EyeColor == "brown").Count();
             Console.WriteLine($"{brownEye} - brown eyes");
+
+            Console.WriteLine("______");
+            //7- correct one
+            var S1 = persons.GroupBy(x => x.EyeColor).ToDictionary(x => x.Key, x => x.Count());
+            foreach (var i in S1)
+            {
+                Console.WriteLine(i);
+            }
+            var S2 = persons.GroupBy(x => x.EyeColor).ToDictionary(x => x.Key, x => x.Count()).Keys;
+            foreach (var i in S2)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("______");
 
             //print unique colors
             var distinctEyeColors = (from i in persons

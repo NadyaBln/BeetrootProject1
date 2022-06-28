@@ -98,7 +98,7 @@ namespace lesson_22_Reflection
             Console.WriteLine($"User {user.Name} is {(Validate(user) ? "valid" : "invalid")}");
         }
 
-        //validation method 
+        //validation method
         private static bool Validate(User user)
         {
             var agePropertyInfo = user.GetType().GetProperty(nameof(User.Age));
@@ -110,7 +110,7 @@ namespace lesson_22_Reflection
             return actualValue > requiredValue;
         }
     }
-}
+
 
 
 
@@ -127,7 +127,7 @@ namespace lesson_22_Reflection
     {
     }
 
-    [AttributeUsage(AttributeTargets.GenericParameter | AttributeTargets.Class | AttributeTargets.Delegate)]
+   // [AttributeUsage(AttributeTargets.GenericParameter | AttributeTargets.Class | AttributeTargets.Delegate)]
     public class MinValueAttribute : Attribute
     {
         public MinValueAttribute(int value)
@@ -156,6 +156,7 @@ namespace lesson_22_Reflection
         public DateTime Birthday { get; set; }
 
         [DefaultValue(50)]
+        [MinValue(6)]
         public int Age { get; set; }
 
         public void Method(int value = 10)
@@ -163,4 +164,5 @@ namespace lesson_22_Reflection
 
         }
     }
+}
 
