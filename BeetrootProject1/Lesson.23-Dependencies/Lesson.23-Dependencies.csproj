@@ -6,4 +6,12 @@
     <RootNamespace>Lesson._23_Dependencies</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.9.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lesson23.Domain\Lesson23.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

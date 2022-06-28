@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CommandLine;
+using Lesson23.DataAccess;
+using Lesson23.Domain;
+using System;
 
 namespace Lesson._23_Dependencies
 {
@@ -7,7 +10,7 @@ namespace Lesson._23_Dependencies
         public static void Main(string[] args)
         {
             var service = new RoomService(new FileDataAccess());
-            var rooms = service.GetAll();
+           // var rooms = service.GetAll();
 
             foreach (var item in args)
             {
