@@ -45,7 +45,7 @@ namespace Lesson_24_Sync
             var requestMessage =  new HttpRequestMessage
             {
                 //link where we sends message
-                RequestUri = new Uri("https://foodish-api.herokuapp.com/api")
+                RequestUri = new Uri("https://api.rainviewer.com/public/weather-maps.json")
             };
 
             //response 
