@@ -10,6 +10,10 @@ namespace Lesson23.Domain
     {
         //use interface to meet SOLID 
         private readonly IDataAccess _dataAccess;
+        public RoomService()
+        {
+            this._dataAccess = new FileDataAccess();
+        }
 
         public RoomService(IDataAccess dataAccess)
         {
