@@ -15,8 +15,6 @@ where age > 18
 select * from Persons
 where Address is null
 
-update Persons set age = age +1
-
 delete from Persons where address is null
 
 select count (*) rows from Persons
