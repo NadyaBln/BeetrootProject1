@@ -11,70 +11,105 @@ namespace Lesson_24_Sync_HW
     {
         static async Task Main(string[] args)
         {
-            //Use any API to request data and return it to the user in user readable form
-            //Extra:
-            //Use several APIs to request data, e.g.user inputs data, application requests it’s geolocation and returns
-            //weather in current geolocation
+            JsonProcessing jsonProcessing = new JsonProcessing();
+            HttpClient httpClient = new HttpClient();
 
-            var httpClient = new HttpClient();
-            var requestMessage = new HttpRequestMessage
+            string userCity = jsonProcessing.GetUserCity();
+            string filePath = "data1.txt";
+
+            //tried to put all this stuff to separate class and methods - but unsuccessfull :(
+            HttpRequestMessage requestMessage = new HttpRequestMessage
             {
-                RequestUri = new Uri("https://goweather.herokuapp.com/weather/Kyiv")
+                RequestUri = new Uri("https://goweather.herokuapp.com/weather/" + userCity)
             };
+            HttpResponseMessage responseMessage = await httpClient.SendAsync(requestMessage);
+            string stringResponse = await responseMessage.Content.ReadAsStringAsync();
+            Console.WriteLine(stringResponse);
 
-            var responceMessage = await httpClient.SendAsync(requestMessage);
-            var stringResponce = await responceMessage.Content.ReadAsStringAsync();
+            Weather.Data weather = JsonConvert.DeserializeObject<Weather.Data>(stringResponse);
+            jsonProcessing.PrintWeather(userCity, weather);
 
-            Console.WriteLine($"response in JSON format: {stringResponce}");
-
-            // deserialize resonse from JSON 
-            //var source = stringResponce;
-            //var parsed = JsonConvert.DeserializeObject<Dictionary<string, Data>>(stringResponce);
-            
-            var json = System.IO.File.ReadAllText("data1.json");
-            Data[] courses = JsonConvert.DeserializeObject<Data[]>(json);
-
-            Console.WriteLine(courses);
-
-            //foreach (var data in courses)
-            //{
-            //    Console.WriteLine($"Key: {data.Key}");
-            //    Console.WriteLine($"Temperature: {data.Temperature} Wind: {data.Wind} Description: {data.Description} ");
-            //}
-
-
-
-            //APIResponse image = JsonConvert.DeserializeObject<APIResponse>(stringResponce);
-            //Console.WriteLine($"got img with url {image.Response}");
-
-            //HttpResponseMessage imageResponce = await httpClient.SendAsync(new HttpRequestMessage
-            //{
-            //    RequestUri = new Uri(stringResponce)
-            //});
-
-            //read it as stream
-            //await using Stream stream = await imageResponce.Content.ReadAsStreamAsync();
-
-            //save
-            //using (FileStream fileStream = File.Create("weatherKyiv.txt"))
-            //{
-            //    stream.Seek(0, SeekOrigin.Begin);
-            //    stream.CopyTo(fileStream);
-            //}
+            jsonProcessing.JsonToFile(stringResponse, userCity.ToUpper(), filePath);
+            jsonProcessing.TextToFile(weather, userCity.ToUpper(), filePath);
         }
+    }
 
-        //private class APIResponse
-        //{
-        //    public string Response { get; set; }
-        //}
+    public class Weather
+    {
         public class Data
         {
+            [JsonProperty("temperature")]
             public string Temperature { get; set; }
+
+            [JsonProperty("wind")]
             public string Wind { get; set; }
+
+            [JsonProperty("description")]
             public string Description { get; set; }
-            public object Key { get; internal set; }
-            public object Value { get; internal set; }
+
+            [JsonProperty("forecast")]
+            public List<Forecast> Forecast { get; set; }
+        }
+        public class Forecast
+        {
+            [JsonProperty("day")]
+            public int Day { get; set; }
+
+            [JsonProperty("temperature")]
+            public string Temperature { get; set; }
+
+            [JsonProperty("wind")]
+            public string Wind { get; set; }
+        }
+    }
+
+    class JsonProcessing
+    {
+        public string GetUserCity()
+        {
+            Console.WriteLine("Input city");
+            string userCity = Console.ReadLine().ToLower();
+            return userCity;
         }
 
+        public void PrintWeather(string userCity, Weather.Data weather)
+        {
+            Console.WriteLine($"In {userCity.ToUpper()} is {weather.Description} today\nTemperature {weather.Temperature}, Wind {weather.Wind}");
+            Console.WriteLine("Forecast for next 3 days:");
+            foreach (var i in weather.Forecast)
+            {
+                Console.WriteLine($"Day {i.Day}\nTemperature: {i.Temperature} Wind: {i.Wind}");
+            }
+        }
+
+        public void JsonToFile(string stringResponse, string userCity, string filePath)
+        {
+            string text = userCity + ": " + stringResponse + "\n";
+            File.AppendAllText(filePath, text);
+        }
+
+        //it was hard!!
+        //it works, but I can't understand how it gets data from class Forecast if I pass parameter Weather.Data, not Weather.Forecast
+        public void TextToFile(Weather.Data weather, string userCity, string filePath)
+        {
+            string toFileWeather = string.Empty;
+            for (var i = 0; i < 1; i++)
+            {
+                toFileWeather += $"In {userCity} is {weather.Description} today\nTemperature {weather.Temperature}, Wind {weather.Wind}\n";
+            }
+
+            string toFileDefaultText = string.Empty;
+            toFileDefaultText += $"Forecast for next 3 days:\n";
+
+            string toFileForecast = string.Empty;
+            foreach (var i in weather.Forecast)
+            {
+                toFileForecast += $"Day {i.Day}\nTemperature: {i.Temperature} Wind: {i.Wind}\n";
+            }
+
+            File.AppendAllText(filePath, toFileWeather);
+            File.AppendAllText(filePath, toFileDefaultText);
+            File.AppendAllText(filePath, toFileForecast);
+        }
     }
 }
