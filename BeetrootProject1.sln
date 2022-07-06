@@ -57,7 +57,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-17-Collections-HW", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson-19-Delegates-HW", "BeetrootProject1\Lesson-19-Delegates-HW\Lesson-19-Delegates-HW.csproj", "{C52148E3-08EC-46A6-8E0A-942ABF29B16E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson-24-Sync-HW", "BeetrootProject1\Lesson-24-Sync-HW\Lesson-24-Sync-HW.csproj", "{393F23C2-BE69-4345-BDCD-9DD3384DEB39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson-24-Sync-HW", "BeetrootProject1\Lesson-24-Sync-HW\Lesson-24-Sync-HW.csproj", "{393F23C2-BE69-4345-BDCD-9DD3384DEB39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lesson-27-SQL2", "lesson-27-SQL2", "{E0C93915-2901-433A-A859-986BD5B87C23}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\LibraryDiagram.png = ..\..\..\Downloads\LibraryDiagram.png
+		..\..\..\Downloads\LibrarySelectAll.png = ..\..\..\Downloads\LibrarySelectAll.png
+		..\..\..\Downloads\SQLQuery8.sql = ..\..\..\Downloads\SQLQuery8.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
