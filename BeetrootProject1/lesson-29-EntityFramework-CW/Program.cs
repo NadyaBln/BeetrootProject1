@@ -28,17 +28,17 @@ namespace lesson_29_EntityFramework_CW
             Console.WriteLine(count);
 
 
-            ////add category 
-            //await context.Categories.AddAsync(new Category
-            //{
-            //    Title = "Gaming",
-            //    Products = new List<Product>
-            //    {
-            //        new Product {Title = "PS5", Price = 233},
-            //        new Product {Title = "xBox", Price = 0}
-            //    }
-            //});
-            //await context.SaveChangesAsync();
+            //add category 
+            await context.Categories.AddAsync(new Category
+            {
+                Title = "Gaming",
+                Products = new List<Product>
+                {
+                    new Product {Title = "PS5", Price = 233},
+                    new Product {Title = "xBox", Price = 0}
+                }
+            });
+            await context.SaveChangesAsync();
 
             //print products from gaming category
             var products = await context.Products.Where(x => x.Category.Title == "Gaming").ToListAsync();
