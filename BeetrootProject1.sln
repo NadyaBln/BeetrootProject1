@@ -57,7 +57,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-17-Collections-HW", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson-19-Delegates-HW", "BeetrootProject1\Lesson-19-Delegates-HW\Lesson-19-Delegates-HW.csproj", "{C52148E3-08EC-46A6-8E0A-942ABF29B16E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson-24-Sync-HW", "BeetrootProject1\Lesson-24-Sync-HW\Lesson-24-Sync-HW.csproj", "{393F23C2-BE69-4345-BDCD-9DD3384DEB39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson-24-Sync-HW", "BeetrootProject1\Lesson-24-Sync-HW\Lesson-24-Sync-HW.csproj", "{393F23C2-BE69-4345-BDCD-9DD3384DEB39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-29-EntityFramework-CW", "BeetrootProject1\lesson-29-EntityFramework-CW\lesson-29-EntityFramework-CW.csproj", "{DC48D5DE-92F9-4000-8190-6C9796E6578C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -169,6 +171,10 @@ Global
 		{393F23C2-BE69-4345-BDCD-9DD3384DEB39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{393F23C2-BE69-4345-BDCD-9DD3384DEB39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{393F23C2-BE69-4345-BDCD-9DD3384DEB39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC48D5DE-92F9-4000-8190-6C9796E6578C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC48D5DE-92F9-4000-8190-6C9796E6578C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC48D5DE-92F9-4000-8190-6C9796E6578C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC48D5DE-92F9-4000-8190-6C9796E6578C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
