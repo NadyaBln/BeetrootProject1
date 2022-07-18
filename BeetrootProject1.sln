@@ -59,6 +59,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson-19-Delegates-HW", "B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson-24-Sync-HW", "BeetrootProject1\Lesson-24-Sync-HW\Lesson-24-Sync-HW.csproj", "{393F23C2-BE69-4345-BDCD-9DD3384DEB39}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-29-EntityFramework-CW", "BeetrootProject1\lesson-29-EntityFramework-CW\lesson-29-EntityFramework-CW.csproj", "{DC48D5DE-92F9-4000-8190-6C9796E6578C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "courseProject-Menu", "BeetrootProject1\courseProject-Menu\courseProject-Menu.csproj", "{124DBCFE-AC99-4A82-BA20-26AAC1FC9FDA}"
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lesson-27-SQL2", "lesson-27-SQL2", "{E0C93915-2901-433A-A859-986BD5B87C23}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\Downloads\LibraryDiagram.png = ..\..\..\Downloads\LibraryDiagram.png
@@ -181,6 +184,10 @@ Global
 		{DC48D5DE-92F9-4000-8190-6C9796E6578C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC48D5DE-92F9-4000-8190-6C9796E6578C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC48D5DE-92F9-4000-8190-6C9796E6578C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{124DBCFE-AC99-4A82-BA20-26AAC1FC9FDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{124DBCFE-AC99-4A82-BA20-26AAC1FC9FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{124DBCFE-AC99-4A82-BA20-26AAC1FC9FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{124DBCFE-AC99-4A82-BA20-26AAC1FC9FDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
