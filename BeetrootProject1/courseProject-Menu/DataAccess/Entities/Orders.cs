@@ -7,7 +7,7 @@ namespace courseProject_Menu.Entities
     {
         public int OrderId { get; set; }
         public int ProductId { get; set; }
-        //public virtual ICollection<Product> ProductId { get; set; }
+        public int Amount { get; set; }
         public DateTime CreationDateTime { get; set; }
         public int GuestId { get; set; }
         public int TableNumber { get; set; }
