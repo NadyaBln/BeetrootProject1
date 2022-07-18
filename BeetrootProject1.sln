@@ -62,6 +62,13 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson-29-EntityFramework-CW", "BeetrootProject1\lesson-29-EntityFramework-CW\lesson-29-EntityFramework-CW.csproj", "{DC48D5DE-92F9-4000-8190-6C9796E6578C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "courseProject-Menu", "BeetrootProject1\courseProject-Menu\courseProject-Menu.csproj", "{124DBCFE-AC99-4A82-BA20-26AAC1FC9FDA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lesson-27-SQL2", "lesson-27-SQL2", "{E0C93915-2901-433A-A859-986BD5B87C23}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\LibraryDiagram.png = ..\..\..\Downloads\LibraryDiagram.png
+		..\..\..\Downloads\LibrarySelectAll.png = ..\..\..\Downloads\LibrarySelectAll.png
+		..\..\..\Downloads\SQLQuery8.sql = ..\..\..\Downloads\SQLQuery8.sql
+	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-29-EntityFramework-CW", "BeetrootProject1\lesson-29-EntityFramework-CW\lesson-29-EntityFramework-CW.csproj", "{DC48D5DE-92F9-4000-8190-6C9796E6578C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
