@@ -65,6 +65,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lesson-27-SQL2", "lesson-27
 		..\..\..\Downloads\LibrarySelectAll.png = ..\..\..\Downloads\LibrarySelectAll.png
 		..\..\..\Downloads\SQLQuery8.sql = ..\..\..\Downloads\SQLQuery8.sql
 	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson-29-EntityFramework-CW", "BeetrootProject1\lesson-29-EntityFramework-CW\lesson-29-EntityFramework-CW.csproj", "{DC48D5DE-92F9-4000-8190-6C9796E6578C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -176,6 +177,10 @@ Global
 		{393F23C2-BE69-4345-BDCD-9DD3384DEB39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{393F23C2-BE69-4345-BDCD-9DD3384DEB39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{393F23C2-BE69-4345-BDCD-9DD3384DEB39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC48D5DE-92F9-4000-8190-6C9796E6578C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC48D5DE-92F9-4000-8190-6C9796E6578C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC48D5DE-92F9-4000-8190-6C9796E6578C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC48D5DE-92F9-4000-8190-6C9796E6578C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
